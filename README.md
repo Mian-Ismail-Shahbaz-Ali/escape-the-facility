@@ -1,2 +1,2 @@
-# escape-the-dungeon
+# escape-the-facility
 A text-based RPG.
