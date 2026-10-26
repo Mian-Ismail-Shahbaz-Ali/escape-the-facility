@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCAPE THE FACILITY</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <main class="game">
+        <header class="game-header">
+            <p class="status-label">LUNAR FACILITY // EMERGENCY SYSTEM</p>
+            <h1>ESCAPE THE FACILITY</h1>
+            <p class="subtitle">A sci-fi survival adventure</p>
+        </header>
+
+        <section class="status-panel" aria-label="Player status">
+            <div>
+                <span>HEALTH</span>
+                <strong id="health">100</strong>
+            </div>
+            <div>
+                <span>OXYGEN</span>
+                <strong id="oxygen">100</strong>
+            </div>
+            <div>
+                <span>LOCATION</span>
+                <strong id="location">Airlock</strong>
+            </div>
+        </section>
+
+        <section class="story-panel" aria-live="polite">
+            <p id="story">INITIALIZING EMERGENCY SYSTEM...</p>
+        </section>
+
+        <form id="name-form" class="name-form">
+            <label for="player-name">ENTER YOUR NAME, SURVIVOR</label>
+            <div class="name-controls">
+                <input
+                    id="player-name"
+                    type="text"
+                    maxlength="24"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    required
+                >
+                <button type="submit">BEGIN</button>
+            </div>
+        </form>
+
+        <nav id="choices" class="choices" aria-label="Game choices">
+        </nav>
+
+        <footer>
+            <p>CONNECTION TO EARTH: LOST</p>
+            <p>MISSION: SURVIVE AND ESCAPE</p>
+        </footer>
+    </main>
+</body>
+</html>

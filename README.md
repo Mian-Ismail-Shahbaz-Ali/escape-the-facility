@@ -40,12 +40,27 @@ You'll need Python 3 installed on your computer.
 
 ### Browser Version
 
-A browser-playable version is currently in development. Instructions and a play link will be added here once it is ready.
+The browser version uses HTML, CSS, and JavaScript.
+
+1. Download or clone this repository.
+2. Open the project folder.
+3. Start a local server in the project directory:
+
+   ```bash
+   python -m http.server 8000
+   ```
+
+   If needed, try `python3 -m http.server 8000` instead.
+
+4. Open `http://localhost:8000` in your browser.
+5. Enter your name and follow the on-screen choices to play.
 
 ## Built With
 
 - Python
-- HTML, CSS, and JavaScript (browser version in development)
+- HTML
+- CSS
+- JavaScript
 
 ## Credits
 
