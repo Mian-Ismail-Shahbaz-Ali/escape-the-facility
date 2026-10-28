@@ -1,12 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
 :root {
-    color-scheme: dark;
     --background: #080d16;
     --panel: #111b2b;
     --border: #263a52;
     --text: #e6edf7;
     --muted: #91a4bc;
     --accent: #55e6c1;
-    --danger: #ff6b78;
 }
 
 * {
@@ -15,18 +15,17 @@
 
 body {
     margin: 0;
-    min-height: 100vh;
     padding: 24px;
-    background:
-        radial-gradient(ellipse at top, #14243a 0%, var(--background) 65%);
+    min-height: 100vh;
+    background: var(--background);
     color: var(--text);
-    font-family: "Courier New", monospace;
+    font-family: "Nunito", sans-serif;
 }
 
 .game {
     width: 100%;
     max-width: 850px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .game-header {
@@ -42,9 +41,8 @@ body {
 }
 
 h1 {
+    font-size: 36px;
     margin: 16px 0 8px;
-    font-size: clamp(28px, 5vw, 44px);
-    letter-spacing: 2px;
 }
 
 .subtitle {
@@ -53,18 +51,17 @@ h1 {
 
 .status-panel {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     margin: 24px 0;
 }
 
-.status-panel > div {
+.status-panel div {
     padding: 16px;
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 8px;
     text-align: center;
-    min-width: 0;
 }
 
 .status-panel span,
@@ -80,7 +77,6 @@ h1 {
 
 .status-panel strong {
     font-size: 20px;
-    overflow-wrap: anywhere;
 }
 
 .story-panel {
@@ -116,8 +112,8 @@ h1 {
 input,
 button {
     font: inherit;
+    padding: 12px;
     border-radius: 5px;
-    padding: 12px 14px;
 }
 
 input {
@@ -134,22 +130,11 @@ button {
     border: 1px solid var(--accent);
     cursor: pointer;
     font-weight: bold;
-    transition: filter 0.15s ease;
-}
-
-button:hover {
-    filter: brightness(1.12);
-}
-
-button:focus-visible,
-input:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
 }
 
 .choices {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin-top: 20px;
 }
@@ -172,7 +157,6 @@ footer {
     border-top: 1px solid var(--border);
     color: var(--muted);
     font-size: 11px;
-    letter-spacing: 1px;
     text-align: center;
 }
 
@@ -185,7 +169,7 @@ footer {
         gap: 6px;
     }
 
-    .status-panel > div {
+    .status-panel div {
         padding: 12px 6px;
     }
 
@@ -199,14 +183,5 @@ footer {
 
     .choices {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
     }
 }

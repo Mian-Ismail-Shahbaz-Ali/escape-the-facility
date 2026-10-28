@@ -155,21 +155,15 @@ function showAirlockChoices() {
         showStory(
             "You enter the abandoned NASA airlock. Emergency lights flicker above you.\n\n" +
             "The facility is silent. A damaged storage bay is nearby, while a maintenance tunnel leads deeper into the station.\n\n" +
-            "You stand inside the facility's damaged airlock. Frost gathers " +
-            "around the sealed outer hatch, and a warning light flashes above " +
-            "the pressure controls. Your communications link to Earth is silent. " +
-            "Beyond the small reinforced window lies the dark, lifeless lunar " +
-            "surface. Somewhere deeper inside, machinery continues to run."
+            "You stand inside the facility's damaged airlock. " +
+            "Frost gathers around the sealed outer hatch, and a warning light flashes above the pressure controls. " +
+            "Your communications link to Earth is silent. " +
+            "Beyond the small reinforced window lies the dark, lifeless lunar surface. Somewhere deeper inside, machinery continues to run."
         );
     } else {
         showStory(
             "You return to the Airlock.\n\n" +
-            "The Storage Bay and Maintenance Tunnel remain accessible.\n\n" +
-            "You stand inside the facility's damaged airlock. Frost gathers " +
-            "around the sealed outer hatch, and a warning light flashes above " +
-            "the pressure controls. Your communications link to Earth is silent. " +
-            "Beyond the small reinforced window lies the dark, lifeless lunar " +
-            "surface. Somewhere deeper inside, machinery continues to run."
+            "The Storage Bay and Maintenance Tunnel remain accessible."
         );
     }
     clearChoices();
@@ -311,7 +305,7 @@ function enterMaintenance() {
         "The tunnel is filled with damaged cables."
     );
     clearChoices();
-    storyDelay(6700).then(() => {
+    storyDelay(5000).then(() => {
         if (gameOver) return;
         showStory(
             "The tunnel is filled with damaged cables.\n\n" +
@@ -493,22 +487,20 @@ function showSurveillance() {
             message:
                 "Researchers detect an unidentified signal beneath the Moon. " +
                 "At first, the signal appears to be a repeating pattern of pulses. " +
-                "The team believes it may be natural, but its timing changes whenever " +
-                "the facility transmits a response. Hours later, communications with " +
-                "Earth fail. The security robots begin attacking personnel without " +
-                "warning. The recording ends as the control room loses power."
+                "The team believes it may be natural, but its timing changes whenever the facility transmits a response. " +
+                "Hours later, communications with Earth fail. " +
+                "The security robots begin attacking personnel without warning. The recording ends as the control room loses power."
         },
         {
             id: "crew",
             title: "Recording 2: The Missing Crew",
             cost: 35,
             message:
-                "The footage shows a researcher entering a restricted lower-level " +
-                "corridor after receiving an unexplained access authorization. " +
+                "The footage shows a researcher entering a restricted lower-level corridor after receiving an unexplained access authorization. " +
                 "Several minutes later, the corridor lights begin flickering. " +
-                "The researcher stops, looks directly toward the surveillance camera, " +
-                "and appears to say something, but the audio is corrupted. The door " +
-                "closes behind them. No one is recorded leaving the corridor. " +
+                "The researcher stops, looks directly toward the surveillance camera, and appears to say something, but the audio is corrupted " +
+                "The door closes behind them. " +
+                "No one is recorded leaving the corridor. " +
                 "The crew's evacuation report lists the researcher as missing."
         },
         {
@@ -516,14 +508,11 @@ function showSurveillance() {
             title: "Recording 3: The Final Transmission",
             cost: 35,
             message:
-                "A visibly exhausted researcher records a final message. They report " +
-                "that the signal appears to respond to the facility's equipment, " +
-                "almost as if it is learning from each transmission. The team tried " +
-                "to shut down the experiment, but the security systems activated " +
-                "before they could reach the control room. The researcher warns that " +
-                "the signal may not be a simple transmission from beneath the Moon. " +
-                "They begin to explain what they discovered, but the recording cuts " +
-                "off before the explanation is complete."
+                "A visibly exhausted researcher records a final message." +
+                "They report that the signal appears to respond to the facility's equipment, almost as if it is learning from each transmission. " +
+                "The team tried to shut down the experiment, but the security systems activated before they could reach the control room. " +
+                "The researcher warns that the signal may not be a simple transmission from beneath the Moon. " +
+                "They begin to explain what they discovered, but the recording cuts off before the explanation is complete."
         }
     ];
     const available = recordings.filter(
@@ -568,12 +557,10 @@ function showJunction() {
     showStory(
         "You enter the Research Junction.\n" +
         "The corridor leads deeper into the facility.\n\n" +
-        "The corridor divides into two routes. One leads toward the security " +
-        "chamber, where the facility's defense systems are controlled. The " +
-        "other leads toward the research laboratories. Emergency lights cast " +
-        "long shadows across abandoned equipment. A nearby terminal flickers " +
-        "with incomplete reports about the experiment that preceded the " +
-        "communications failure."
+        "One route leads toward the security chamber, where the facility's defense systems are controlled. " +
+        "The other leads toward the research laboratories. " +
+        "Emergency lights cast long shadows across abandoned equipment. " +
+        "A nearby terminal flickers with incomplete reports about the experiment that preceded the communications failure."
     );
     clearChoices();
     addChoice("Review Security Footage", showSurveillance);
@@ -603,12 +590,9 @@ function showPowerRoom() {
     }
     showStory(
         "You enter the Power Control Room.\n\n" +
-        "POWER CONTROL ROOM\n\n" +
-        "Overloaded generators vibrate behind reinforced panels. Several " +
-        "monitors display conflicting readings, and a warning identifies an " +
-        "unexplained surge during the lunar signal experiment. The facility's " +
-        "systems are failing, and the remaining power must be managed carefully.\n\n" +
-        "The facility's main power system is failing.\n\n" +
+        "Overloaded generators vibrate behind reinforced panels. " +
+        "Several monitors display conflicting readings, and a warning identifies an unexplained surge during the lunar signal experiment. " +
+        "The facility's systems are failing, and the remaining power must be managed carefully.\n\n" +
         "--- INCIDENT REPORT ---\n" +
         "Research Station - Day 23\n" +
         "The power surge began during the signal experiment.\n" +
@@ -679,14 +663,13 @@ function showSecurityRoom() {
     }
     showStory(
         "SECURITY CHAMBER\n\n" +
-        "The security chamber is silent except for the hum of damaged " +
-        "computers. Warning symbols cover the central display, and the doors " +
-        "behind you lock automatically. A large security machine stands " +
-        "between you and the emergency access keycard. Its sensors begin " +
-        "tracking your movement."
+        "The security chamber is silent except for the hum of damaged computers. " +
+        "Warning symbols cover the central display, and the doors behind you lock automatically. " +
+        "A large security machine stands between you and the emergency access keycard. " +
+        "Its sensors begin tracking your movement."
     );
     clearChoices();
-    storyDelay(6700).then(() => {
+    storyDelay(5000).then(() => {
         if (gameOver) return;
         showStory(
             "The Security Mech blocks the corridor ahead.\n" +
@@ -716,8 +699,7 @@ function showResearchLab() {
         showStory(
             "You return to the Research Lab.\n\n" +
             "The terminal's emergency access route is already unlocked.\n" +
-            "The research logs reveal that the mysterious signal " +
-            "originates deep beneath the Moon's surface."
+            "The research logs reveal that the mysterious signal originates deep beneath the Moon's surface."
         );
         clearChoices();
         addChoice("Continue To Emergency Area", showEmergencyArea);
@@ -727,10 +709,9 @@ function showResearchLab() {
     showStory(
         "You enter the Research Lab.\n\n" +
         "The laboratory has been abandoned in the middle of an experiment. " +
-        "Sample containers sit beside an overturned chair, and a cracked " +
-        "monitor displays fragments of a repeating signal. Notes on the " +
-        "console describe a transmission originating beneath the lunar " +
-        "surface. A computer terminal remains active, waiting for input.\n\n" +
+        "Sample containers sit beside an overturned chair, and a cracked monitor displays fragments of a repeating signal. " +
+        "Notes on the console describe a transmission originating beneath the lunar surface. " +
+        "A computer terminal remains active, waiting for input.\n\n" +
         "\"I have no atmosphere, yet I surround you. " +
         "I have no gravity, yet I hold countless worlds. " +
         "What am I?\""
@@ -754,8 +735,7 @@ function solveResearchRiddle() {
         riddleSolved = true;
         showStory(
             "Correct! The terminal unlocks an emergency access route.\n\n" +
-            "The research logs reveal that the mysterious signal " +
-            "originates deep beneath the Moon's surface."
+            "The research logs reveal that the mysterious signal originates deep beneath the Moon's surface."
         );
         clearChoices();
         addChoice("Continue To Emergency Area", showEmergencyArea);
@@ -808,8 +788,7 @@ function showEmergencyArea() {
     showStory(
         "You enter the Emergency Area.\n\n" +
         "The Emergency Access Keycard unlocks the final security gate.\n\n" +
-        "The emergency systems begin powering up. The mysterious signal " +
-        "continues pulsing beneath the Moon, but you have a chance to escape.\n\n" +
+        "The emergency systems begin powering up. The mysterious signal continues pulsing beneath the Moon, but you have a chance to escape.\n\n" +
         "The escape route is open."
     );
     clearChoices();
@@ -972,7 +951,7 @@ function restartGame() {
 
     clearChoices();
 
-    showStory("INITIALIZING EMERGENCY SYSTEM...");
+    showStory("Initializing Emergency System...");
 
     updateStatus();
     nameInput.focus();
@@ -982,4 +961,4 @@ function restartGame() {
 
 nameForm.addEventListener("submit", beginGame);
 updateStatus();
-showStory("INITIALIZING EMERGENCY SYSTEM...");
+showStory("Initializing Emergency System...");

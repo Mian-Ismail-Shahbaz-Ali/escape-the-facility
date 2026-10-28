@@ -15,7 +15,7 @@
             <p class="subtitle">A sci-fi survival adventure</p>
         </header>
 
-        <section class="status-panel" aria-label="Player status">
+        <section class="status-panel">
             <div>
                 <span>HEALTH</span>
                 <strong id="health">100</strong>
@@ -30,27 +30,20 @@
             </div>
         </section>
 
-        <section class="story-panel" aria-live="polite">
+        <section class="story-panel">
             <p id="story">INITIALIZING EMERGENCY SYSTEM...</p>
         </section>
 
         <form id="name-form" class="name-form">
             <label for="player-name">ENTER YOUR NAME, SURVIVOR</label>
             <div class="name-controls">
-                <input
-                    id="player-name"
-                    type="text"
-                    maxlength="24"
-                    placeholder="Your name"
-                    autocomplete="name"
-                    required
-                >
+                <input id="player-name" type="text"
+                    maxlength="24" placeholder="Your name" required>
                 <button type="submit">BEGIN</button>
             </div>
         </form>
 
-        <nav id="choices" class="choices" aria-label="Game choices">
-        </nav>
+        <nav id="choices" class="choices"></nav>
 
         <footer>
             <p>CONNECTION TO EARTH: LOST</p>
